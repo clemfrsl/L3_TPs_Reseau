@@ -1,0 +1,8 @@
+        TP2
+
+    Client UDP
+
+Client UDP Echo en Java:
+
+1- Le client ne peut pas utiliser le port 1234 car c'est un port réserver à l'admin.
+2-
