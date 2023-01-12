@@ -14,6 +14,7 @@ public class ClientUDP {
         else{
             port = 1234;
             address = InetAddress.getByName("localhost");
+//            address = InetAddress.getLocalHost(); existe aussi, peut etre mieux
         }
 
         Scanner scanner = new Scanner(System.in);
@@ -26,7 +27,13 @@ public class ClientUDP {
         socket.send(packet);
         socket.receive(packet);
 
-
+        /*Sofiane (pas compris)
+        while(true){
+            socket.receive(packet);
+            System.out.println(packet.getAddress());
+            socket.send(packet);
+        }
+         */
 
     }
 
