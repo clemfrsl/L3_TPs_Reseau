@@ -16,7 +16,8 @@ Ctrl+C envoie le INT signal et ferme l'application
 
 Tests Fonctionnels :
 
-3-
+3- Les deux clients peuvent envoyer des messages au serveur.
+Celui-ci indique un port différent pour chaque client.
 
 Autres Clients Echo :
 

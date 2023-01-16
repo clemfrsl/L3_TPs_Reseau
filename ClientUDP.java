@@ -13,17 +13,13 @@ public class ClientUDP {
             InetAddress address = InetAddress.getByName(args[0]);
 
             Scanner scanner = new Scanner(System.in);
-            String inputMessage = scanner.next();
 
-            byte[] buffer = inputMessage.getBytes();
-            DatagramSocket socket = new DatagramSocket(port, address);
-
-            DatagramPacket packet = new DatagramPacket(buffer,0, buffer.length, address, port);
-            socket.send(packet);
-            socket.receive(packet);
+            DatagramSocket socket = new DatagramSocket();
 
             while (true) {
-                socket.receive(packet);
+                String inputMessage = scanner.nextLine();
+                byte[] buffer = inputMessage.getBytes();
+                DatagramPacket packet = new DatagramPacket(buffer,0, buffer.length, address, port);
                 System.out.println(packet.getAddress());
                 socket.send(packet);
             }

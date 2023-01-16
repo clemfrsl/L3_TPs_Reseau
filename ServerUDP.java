@@ -8,13 +8,14 @@ public class ServerUDP {
         byte msg[] = new byte[512];
 
         DatagramSocket socket = new DatagramSocket(port);
-        DatagramPacket packet = new DatagramPacket(msg, msg.length);
-        socket.receive(packet);
 
-        String message = new String(packet.getData());
-        System.out.println(message);
-        DatagramPacket response = new DatagramPacket(msg, msg.length);
-        socket.send(response);
-
+        while(true) {
+            DatagramPacket packet = new DatagramPacket(msg, msg.length);
+            socket.receive(packet);
+            String message = new String(packet.getData(), 0, packet.getLength());
+            System.out.println(">"+message);
+            System.out.println("From port : "+ packet.getPort());
+            socket.send(packet);
+        }
     }
 }
