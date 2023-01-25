@@ -15,13 +15,13 @@ public class ClientTCP {
         InetSocketAddress address = new InetSocketAddress(1234);
         socket.connect(address);
 
-        InputStream inputStream = socket.getInputStream();
-        int message = inputStream.read();
-        System.out.println("message = " + message);
-        OutputStream outputStream = socket.getOutputStream();
-        outputStream.write(message+1);
-        message = inputStream.read();
-        System.out.println("message = " + message);
+        while(scanner.hasNextLine()) {
+            String inputMessage = scanner.nextLine() + '\n';
+            byte[] buffer = inputMessage.getBytes();
+
+            OutputStream outputStream = socket.getOutputStream();
+            outputStream.write(buffer);
+        }
 
         socket.close();
 
