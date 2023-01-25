@@ -1,0 +1,24 @@
+Serveur TCP
+    Tester avec le client
+
+Q) Que se passe-t-il si vous utilisez deux clients en même temps ?
+    Expliquez.
+
+...
+...
+
+Autres Clients Echo
+    Test
+
+Q) Tester ce client avec le serveur java. En quoi ce test illustre-t-il le paradigme client-serveur ?
+
+...
+...
+
+    Compatibilité UDP et TCP
+
+Q) Tester vos clients TCP avec le serveur UDP. Tester vos clients UDP avec le serveur TCP.
+    Expliquez.
+
+...
+...
