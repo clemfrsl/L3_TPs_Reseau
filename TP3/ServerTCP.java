@@ -10,7 +10,6 @@ public class ServerTCP {
 
     public static void main(String[] args) throws IOException {
 
-        //cas UDP
         int port = 1234;
 
         ServerSocket serverSocket = new ServerSocket(port);
