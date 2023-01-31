@@ -4,8 +4,7 @@ Serveur TCP
 Q) Que se passe-t-il si vous utilisez deux clients en même temps ?
     Expliquez.
 
-...
-...
+Le premier client fonctionne, et le second est bloqué. (pas sur)
 
 Autres Clients Echo
     Test
