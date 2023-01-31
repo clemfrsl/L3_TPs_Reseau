@@ -4,20 +4,21 @@ Serveur TCP
 Q) Que se passe-t-il si vous utilisez deux clients en même temps ?
     Expliquez.
 
-Le premier client fonctionne, et le second est bloqué. (pas sur)
+Le premier client fonctionne, et le second est bloqué (connexion refusée).
 
 Autres Clients Echo
     Test
 
 Q) Tester ce client avec le serveur java. En quoi ce test illustre-t-il le paradigme client-serveur ?
 
-...
-...
+La connexion se fait exactement comme avec le client java.
+Cela montre bien que la connexion peut se faire entre java et python sans distinction.
 
     Compatibilité UDP et TCP
 
 Q) Tester vos clients TCP avec le serveur UDP. Tester vos clients UDP avec le serveur TCP.
     Expliquez.
 
-...
-...
+Les clients et serveurs TCP demande une connexion mais les clients et serveurs UDP n'en demande pas.
+Donc le serveur UDP refuse la connexion avec le client TCP.
+Et le serveur TCP ne reçoit pas les messages du client UDP même s'il accepte la connexion.
