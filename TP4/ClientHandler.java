@@ -14,14 +14,14 @@ public class ClientHandler extends Thread{
     public void run() {
         String message = "";
         while(true){
-            InputStream inputStream = null;
+            InputStream inputStream;
             try {
                 inputStream = socket.getInputStream();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
 
-            char c = 0;
+            char c;
             try {
                 c = (char) inputStream.read();
             } catch (IOException e) {
@@ -30,7 +30,7 @@ public class ClientHandler extends Thread{
             if(c != '\n'){
                 message+= c;
             }
-            else if(c == '\n') {
+            else {
                 System.out.println("> " + message);
                 message = "";
             }

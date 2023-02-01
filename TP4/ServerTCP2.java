@@ -10,28 +10,18 @@ public class ServerTCP2 {
     public static void main(String[] args) throws IOException {
 
         int port = 1234;
-
         ServerSocket serverSocket = new ServerSocket(port);
-        Socket socket = serverSocket.accept();
 
-        String message = "";
+        while(true) {
 
-        ClientHandler clientHandler = new ClientHandler(socket);
 
-        while(true){
-            InputStream inputStream = socket.getInputStream();
+            Socket socket = serverSocket.accept();
 
-            char c = (char) inputStream.read();
-            if(c != '\n'){
-                message+= c;
-            }
-            else if(c == '\n') {
-                System.out.println("> " + message);
-                message = "";
-            }
+            ClientHandler clientHandler = new ClientHandler(socket);
+
+            clientHandler.start();
 
         }
         //socket.close();
-
     }
 }
