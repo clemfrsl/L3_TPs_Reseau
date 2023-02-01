@@ -1,0 +1,32 @@
+Clément FRESNEL, Juliette DADOIT
+        TP4
+    Serveur Simple
+
+
+Reprendre le serveur de TP précédent, expliquer précisément ce qui se passe lorsque deux clients se connectent en même temps au serveur.
+> Quand le premier client se connecte au serveur, le second se retrouve bloquer quand il se connecte au serveur car le serveur ne reçoit que les données du 1er client.
+
+Quelles solutions connaissez-vous pour gérer les entrées/sorties concurrentes et asynchrones ?
+> On connait les threads.
+
+    Thread
+
+-Test de performances 1:
+Y a-t-il une différence de comportement de votre serveur pour les mêmes nombres de connexion entre les clients Stress1 selon que vous fermez la connexion immédiatement ou non ?
+>
+
+Que se passe-t-il si vous lancez 5 clients Stress1 simultanément avec comme paramètre 1 000 ?
+>
+
+-Test de performances 2:
+Que constatez-vous ?
+>
+
+-Test de performance 3:
+Que constatez-vous ?
+>
+
+-Test de performance 4:
+Que constatez-vous ?
+>
+
