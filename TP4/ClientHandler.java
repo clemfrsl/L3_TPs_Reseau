@@ -29,6 +29,7 @@ public class ClientHandler extends Thread{
             }
             if(c != '\n'){
                 message+= c;
+                System.out.println("> " + message);
             }
             else {
                 System.out.println("> " + message);

@@ -13,14 +13,9 @@ public class ServerTCP2 {
         ServerSocket serverSocket = new ServerSocket(port);
 
         while(true) {
-
-
             Socket socket = serverSocket.accept();
-
             ClientHandler clientHandler = new ClientHandler(socket);
-
             clientHandler.start();
-
         }
         //socket.close();
     }

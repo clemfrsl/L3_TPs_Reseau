@@ -12,7 +12,7 @@ public class Stress1 {
 
     public Stress1(int counter) throws IOException {
         this.counter = counter;
-        runClients();
+        this.runClients();
     }
 
     public void runClients() throws IOException {
@@ -20,9 +20,11 @@ public class Stress1 {
             Socket socket = new Socket();
             InetSocketAddress address = new InetSocketAddress(1234);
             socket.connect(address);
-            byte[] buffer = ("le client "+ n + "se connecte").getBytes();
+            byte[] buffer = ("le client "+ n + " se connecte \n").getBytes();
+            System.out.println(n);
             OutputStream outputStream = socket.getOutputStream();
             outputStream.write(buffer);
+            socket.close();
         }
     }
 }
